@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1>{{ title }}</h1>
+
+<!-- Search Form -->
+<form action="/contacts" method="get">
+    <input type="text" name="FullName" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+    {% if cont.length > 0 %}
+        {% for c in cont %}
+            <div>
+                <li>{{ c.FullName }}</li>
+                <li>{{ c.Phone}} </li>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No contacts found.</p>
+    {% endif %}
+</ul>
+</body>
+</html>

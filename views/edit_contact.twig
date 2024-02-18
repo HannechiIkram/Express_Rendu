@@ -1,0 +1,8 @@
+<h1>Edit Contact</h1>
+<form action="/contacts/edit/{{ contact._id }}" method="post">
+    <label for="FullName">Full Name:</label><br>
+    <input type="text" id="FullName" name="FullName" value="{{ contact.FullName }}" required><br>
+    <label for="Phone">Phone:</label><br>
+    <input type="text" id="Phone" name="Phone" value="{{ contact.Phone }}" required><br><br>
+    <button type="submit">Update Contact</button>
+</form>
